@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="https://image.flaticon.com/icons/svg/2333/2333041.svg"
+      type="image/x-icon"
+    />
+
+    <!-- EX Css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>โปรแกรมคำนวน</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="jumbotron shadow bg-light">
+        <h3><i class="fas fa-chart-pie"></i> คำนวณเปอร์เซ็นต์การสอบผ่าน</h3>
+        <hr>
+
+    <form action="">
+        <div class="row">
+
+          <div class="col-sm">
+            <label for="subject">วิชาที่สอบ</label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="subjectIcon"><i class="fas fa-book"></i></span>
+              </div>
+              
+              <input type="text" class="form-control" id="subject"  aria-label="วิชาที่สอบ" aria-describedby="subjectIcon" autocomplete="off" />
+            </div>
+
+          </div>
+
+        <div class="col-sm">
+            <label for="studentCount">จำนวนนักเรียนทั้งหมด</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="allStudenticon"><i class="fas fa-users"></i></span>
+                </div>
+                <input type="number" class="form-control" id="studentCount"  aria-label="จำนวนนักเรียนทั้งหมด" aria-describedby="allStudenticon" autocomplete="off" min="0" />
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <label for="studentPass">จำนวนนักเรียนที่สอบผ่าน</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="studentPassicon"><i class="fas fa-user-check"></i></span>
+                </div>
+                <input type="number" class="form-control" id="studentPass" aria-label="จำนวนนักเรียนที่สอบผ่าน" aria-describedby="studentPassicon" autocomplete="off" min="0"/>
+            </div>
+        </div>
+
+        </div>
+
+            <button class="btn btn-warning" type="button" id="calBtn" onclick="calResult()">คำนวณ</button>
+            <button class="btn btn-secondary" type="reset" onclick="resetFrom()">รีเซ็ต</button>
+    </form>
+
+    
+
+    <div class="mt-5" id="ansSection">
+        <div class="row">
+            <div class="col-sm my-auto d-flex-inline align-items-sm-center text-center">
+                <h5><span class="text-muted">วิชาที่สอบ :</span> <span id="resSubject"></span></h5>
+                <h5><span class="text-muted">จำนวนนักเรียนทั้งหมด :</span> <span id="resAllStudent"></span> คน</h5>
+                <h5><span class="text-muted">จำนวนนักเรียนที่สอบผ่าน :</span> <span id="resPassStudent"></span> คน</h5>
+            </div>
+            <div class="col-sm my-auto text-center">
+                <div class="alert alert-info">
+                    <small>คิดเป็น</small><br>
+                <span class="display-1 text-primary" id="result"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+    
+
+    </div> <!--end container-->
+
+    <footer>
+        <small class="text-muted">Create by 
+            <a href="https://www.facebook.com/tinngritS77" target="_blank" class="text-decoration-none flink"><i class="fab fa-facebook"></i> TinngritS77</a>
+            <a href="https://github.com/slapexs" target="_blank" class="text-decoration-none flink"><i class="fab fa-github"></i> slapexs</a>
+        </small>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Ex js -->
+    <script src="script.js"></script>
+  </body>
+</html>
